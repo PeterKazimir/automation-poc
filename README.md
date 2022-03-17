@@ -15,6 +15,7 @@ The project should include a gradle build file, which can be used to execute the
   * [Phase 1 - outcomes](#phase-1---outcomes)
 * [Phase 2 - test analysis](#phase-2---test-analysis)
 * [Phase 3 - automation POC](#phase-3---automation-poc)
+* [How to run tests](#how-to-run-tests)
 
 ## Phase 1 - discovery
 
@@ -121,4 +122,24 @@ I will **assume, that I am only interested in flights on exact dates, specified 
 
 The project is a web UI test which requires a gradle file to run.
 Even though articles exists on how to use Gradle with Python scripts, or Javascript tools such as Jasmine or Karma, I decided to stick to the stack I am most familiar with and create a POC using Java + Cucumber + Selenium.
+
+## How to run tests
+
+There are multiple ways of running the tests.
+
+#### To run the tests with IDE (IntelliJ):
+* import the project into your IDE
+* check that the project is recognized as Gradle - you will see a Gradle panel in the IDE, typically on the right edge of the window
+* run assemble task
+* open TestRunner class and run tests by clicking on the green play button
+
+or
+
+* instead of running assemble task, run build task, it will run both assemble and test tasks
+
+#### To run the tests with IDE (IntelliJ):
+
+Open terminal in the root of the project, where build.gradle file is and run this command:
+
+`./gradlew runUITests`
 
