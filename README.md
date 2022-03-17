@@ -128,6 +128,7 @@ Even though articles exists on how to use Gradle with Python scripts, or Javascr
 There are multiple ways of running the tests.
 
 #### To run the tests with IDE (IntelliJ):
+* download a chromedriver suitable for your Chrome version, you can either set it up in your system path, or place the executable direclty in the project root
 * import the project into your IDE
 * check that the project is recognized as Gradle - you will see a Gradle panel in the IDE, typically on the right edge of the window
 * run assemble task
