@@ -11,8 +11,9 @@ import io.cucumber.junit.CucumberOptions;
                 "pretty",
                 "json:build/cucumber-report/cucumber.json",
                 "html:build/cucumber-report/cucumber.html",
-                "junit:build/cucumber-report/cucumber.xml"},
-        tags = "@poc"
+                "junit:build/cucumber-report/cucumber.xml"
+        },
+        tags = "@kayak"
 )
 
 public class TestRunner {
