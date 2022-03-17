@@ -119,4 +119,6 @@ I will **assume, that I am only interested in flights on exact dates, specified 
 
 ## Phase 3 - automation POC
 
-TBD
+The project is a web UI test which requires a gradle file to run.
+Even though articles exists on how to use Gradle with Python scripts, or Javascript tools such as Jasmine or Karma, I decided to stick to the stack I am most familiar with and create a POC using Java + Cucumber + Selenium.
+
