@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.LandingPage;
+import pages.SearchForm;
 
 public class KayakSteps {
     
@@ -15,17 +16,17 @@ public class KayakSteps {
 
     @Given("^the user searches for (.+) offers$")
     public void theUserSearchesForRoundtripOffers(String type) {
-        LandingPage.selectOfferType(type);
+        SearchForm.selectOfferType(type);
     }
 
     @Given("^the departure airport is (.+)$")
     public void theDepartureAirportIs(String departureAirport) {
-        System.out.println("Setting the airport to: " + departureAirport);
+        SearchForm.selectDepartureAirport(departureAirport);
     }
 
     @Given("^the destination airport is (.+)$")
     public void theDestinationAirportIs(String destinationAirport) {
-        System.out.println("Setting the airport to: " + destinationAirport);
+        SearchForm.selectDestinationAirport(destinationAirport);
     }
 
     @Given("^the departure date is (.+)$")
