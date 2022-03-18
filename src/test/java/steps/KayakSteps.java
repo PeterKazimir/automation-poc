@@ -3,17 +3,19 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.LandingPage;
 
 public class KayakSteps {
     
     @Given("the user visits kayak.ch landing page")
     public void theUserVisitsKayakChLandingPage() {
-        System.out.println("Visiting Kayak.ch");
+        LandingPage.open();
+        LandingPage.rejectCookies();
     }
 
-    @Given("the user searches for roundtrip offers")
-    public void theUserSearchesForRoundtripOffers() {
-        System.out.println("Setting the filter to roundtrip search");
+    @Given("^the user searches for (.+) offers$")
+    public void theUserSearchesForRoundtripOffers(String type) {
+        LandingPage.selectOfferType(type);
     }
 
     @Given("^the departure airport is (.+)$")
