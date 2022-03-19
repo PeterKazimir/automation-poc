@@ -101,5 +101,7 @@ public class SearchForm {
 
     private static void selectDayFromDatePicker(String departureDate) {
         doThis().findElement(By.xpath(String.format(DATE_PICKER_DAY_FORMAT_XPATH, departureDate.split("\\.")[0]))).click();
+        doThis().findElement(DESTINATION_AIRPORT_INPUT_WHEN_ACTIVE).sendKeys(airportCode);
+        doThis().findElement(By.xpath(String.format(DROPDOWN_ITEM_FORMAT_XPATH, airportCode))).click();
     }
 }
