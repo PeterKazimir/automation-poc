@@ -31,7 +31,7 @@ public class KayakSteps {
 
     @Given("^the departure date is (.+)$")
     public void departureDateIs(String departureDate) {
-        System.out.println("Setting the departure date to: " + departureDate);
+        SearchForm.selectDepartureDate(departureDate);
     }
 
     @Given("^the return date is (.+)$")
